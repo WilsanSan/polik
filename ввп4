@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    //1
+    double a, b, s = 0, p = 0;
+    cin >> a;
+    cin >> b;
+    s = a * b;
+    p = 2 * (a + b);
+    cout << "Площадь равна" << s << endl;
+    cout << "Периметр равен" << p << endl;
+    //2
+
+    double t = 3.14, d, L;
+    cin >> d;
+    L = t * d;
+    cout << "Длина равна" << L << endl;
+    //3
+
+    double x, y, srznach;
+    cin >> x >> y;
+    srznach = (a + b) / 2;
+    cout << "Среднее арифметическое равно" << srznach << endl;
+    //4
+
+    double q, w, summ, razn, pr, ch;
+    cin >> q >> w;
+    if ((q == 0) || (w == 0))
+    {
+
+        cout << "Введите ненулевое число" << endl;
+    }
+    else
+    {
+        summ = q + w;
+        razn = q - w;
+        pr = q * w;
+        ch = q / w;
+        cout << "Сумма равна" << summ << endl;
+        cout << "Разность равна" << razn << endl;
+        cout << "Произведение равно" << pr << endl;
+        cout << "Частное равно" << ch << endl;
+    }
+    //5
+    double m, n, summ2, razn2, pr2, ch2;
+    cin >> m >> n;
+    if ((m == 0) || (n == 0))
+    {
+
+        cout << "Введите ненулевое число" << endl;
+    }
+    else
+    {
+        summ2 = abs(m + n);
+        razn2 = abs(m - n);
+        pr2 = abs(m * n);
+        ch2 = abs(m / n);
+        cout << "Сумма модулей равна" << summ2 << endl;
+        cout << "Разность модулей равна" << razn2 << endl;
+        cout << "Произведение модулей равно" << pr2 << endl;
+        cout << "Частное модулей равно" << ch2 << endl;
+    }
+}
