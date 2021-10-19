@@ -6,46 +6,51 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	//1
+	cout << "№1\n";
 	double a, b, s = 0, p = 0;
 	cout << "Введите стороны прямоугольника\n";
 	cin >> a;
 	cin >> b;
 	s = a * b;
 	p = 2 * (a + b);
-	cout << "Площадь равна" << s << endl;
-	cout << "Периметр равен" << p << endl;
+	cout << "Площадь равна " << s << endl;
+	cout << "Периметр равен " << p << "\n" << endl;
 	//2
+	cout << "№2\n";
 	double t = 3.14, d, L;
 	cout << "Введите диаметр окружности\n";
 	cin >> d;
 	L = t * d;
-	cout << "Длина равна" << L << endl;
+	cout << "Длина равна " << L << "\n" << endl;
 	//3
+	cout << "№3\n";
 	double x, y, srznach;
 	cout<<  "Введите два числа\n";
 	cin >> x >> y;
 	srznach = (a + b) / 2;
-	cout << "Среднее арифметическое равно" << srznach << endl;
+	cout << "Среднее арифметическое равно " << srznach <<  "\n" << endl;
 	//4
+	cout << "№4\n";
 	double q, w, summ, razn, pr, ch;
 	cout <<  "Введите ненулевое число\n";
 	cin >> q >> w;
 	if ((q == 0) || (w == 0))
 	{
-		cout << "Введите ненулевое числа\n" << endl;
+		cout << "Введите ненулевое числа\n" <<  "\n" << endl;
 	}
 	else
 	{
-		summ = q + w;
-		razn = q - w;
-		pr = q * w;
-		ch = q / w;
-		cout << "Сумма равна" << summ << endl;
-		cout << "Разность равна" << razn << endl;
-		cout << "Произведение равно" << pr << endl;
-		cout << "Частное равно" << ch << endl;
+		summ = q*q + w*w;
+		razn = q*q - w*w;
+		pr = q*q * w*w;
+		ch = (q*q) / (w*w);
+		cout << "Сумма квадратов равна " << summ << endl;
+		cout << "Разность квадратов равна " << razn << endl;
+		cout << "Произведение квадратов равно " << pr << endl;
+		cout << "Частное квадратов равно " << ch <<  "\n" << endl;
 	}
 	//5
+	cout << "№5\n";
 	double m, n, summ2, razn2, pr2, ch2;
 	cout<< "Введите ненулевое число\n";
 	cin >> m >> n;
@@ -55,13 +60,13 @@ int main()
 	}
 	else
 	{
-		summ2 = abs(m + n);
-		razn2 = abs(m - n);
-		pr2 = abs(m * n);
-		ch2 = abs(m / n);
-		cout << "Сумма модулей равна" << summ2 << endl;
-		cout << "Разность модулей равна" << razn2 << endl;
-		cout << "Произведение модулей равно" << pr2 << endl;
-		cout << "Частное модулей равно" << ch2 << endl;
+		summ2 = abs(m)+ abs(n);
+		razn2 = abs(m) - abs(n);
+		pr2 = abs(m) * abs(n);
+		ch2 = abs(m)/ abs(n);
+		cout << "Сумма модулей равна " << summ2 << endl;
+		cout << "Разность модулей равна " << razn2 << endl;
+		cout << "Произведение модулей равно " << pr2 << endl;
+		cout << "Частное модулей равно " << ch2 <<  "\n" << endl;
 	}
 }
