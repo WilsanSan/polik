@@ -6,7 +6,7 @@ int main()
 	using namespace std;
 	cout << "Задание №1\n" << endl;
 	long double a, b, x, y, c;
-	float zamenaB, zamena = 0;
+	float zamenaB,zamenac, zamena = 0;
 	cout << "Введите 2 числа " << endl;
 	cout << "A = "; cin >> a;
 	cout << "B = "; cin >> b;
@@ -36,8 +36,8 @@ int main()
 	cout << "B = "; cin >> b;
 	cout << "C = "; cin >> c;
 	cout << "\n";
-	zamena = a; zamenaB = b;
-	a = c; b = zamena; c = zamenaB;
+	zamena = a; zamenaB = b; zamenac = c;
+	c=zamena;b=zamenac; a=zamenaB;
 	cout << "A = " << a << endl;
 	cout << "B = " << b << endl;
 	cout << "C = " << c << endl;
