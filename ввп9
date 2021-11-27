@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{  /////1 zadacha
+    int N, sec;
+    cout << "\nЗадание №1" << endl;
+    cout << "С начала суток прошло N секунд (N — целое)" << endl;
+    cout << "Введите N=";
+    cin >> sec;
+    N = sec - ((sec / 60) * 60);
+    cout << "Количество секунд, прошедших с начала последней минуты:" << N << endl;
+
+
+    ////////2 zadacha
+    int K;
+    cout << "\nЗадание №2" << endl;
+    cout << "Дано целое число K, лежащее в диапазоне 1–365" << endl;
+    cout << "Введите K=";
+    cin >> K;
+    cout << "Номер дня недели для " << K << "-го дня года равно:" << K % 7 << endl;
+
+    //////3 zadacha
+    int j, k, n, m;
+    cout << "\nЗадание №3" << endl;
+    cout << "Дано целое число K, лежащее в диапазоне 1–365" << endl;
+    cout << "Введите K=";
+    cin >> k;
+    cout << "И целое число N, лежащее в диапазоне 1–7. " << endl;
+    cout << "Введите N=";
+    cin >> n;
+    m = ((k + n - 2) % 7) + 1;
+    cout << "Номер дня недели для " << k << "-го дня года равно:" << m << endl;
+
+    //////4 zadacha 
+    int a, b, c, s1, s2, kolvo_kvadr, ostatok;
+    cout << "\nЗадание №4" << endl;
+    cout << "Введите значение A=";
+    cin >> a;
+    cout << "Введите значение B=";
+    cin >> b;
+    cout << "Введите значение C=";
+    cin >> c;
+    s1 = a * b;
+    s2 = c * c;
+    kolvo_kvadr = (a / c) * (b / c);
+    ostatok = s1 - kolvo_kvadr * s2;
+    cout << "Найти количество квадратов, размещенных на прямоугольнике:" << kolvo_kvadr << endl;
+    cout << "Площадь незанятой части прямоугольника:" << ostatok << endl;
+
+    //////5 zadacha
+    int ng, ns;
+    cout << "\nЗадание №5" << endl;
+    cout << "Дан номер некоторого года (целое положительное число)" << endl;
+    cout << "Введите номер года:";
+    cin >> ng;
+    ns = ((ng - 1) / 100) + 1;
+    cout << "Этот год " << ns << "-го столетия" << endl;
+
+    return 0;
+}
