@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+cout<<"\nЗадача №1"<<endl;
+int a,b;
+cout<<"Дано:A>2 и B<=3. Справедливо ли неравенство?"<<endl;
+cout<<"A=";
+cin>>a;
+cout<<"B=";
+cin>>b;
+if (a>2 && b<=3){
+	cout<<"     Истина"<<endl;
+}
+else {
+    cout<<"      Ложь"<<endl;
+}
+
+cout<<"\nЗадача №2"<<endl;
+int c;
+cout<<"Дано: A<B<C. Справедливо ли неравенство?"<<endl;
+cout<<"A="; 
+cin>>a;
+cout<<"B=";
+cin>>b;
+cout<<"C=";
+cin>>c;
+  if (a<b && b<c && a<c) {
+  cout<<"       Истина"<<endl;
+}
+ else {
+  cout<<"      Ложь"<<endl;
+}
+cout<<"\nЗадача №3"<<endl;
+int chislo, ch;
+cout<<"Введенное Вами число является четным двухзначным?"<<endl;
+cout<<"Введите любое целое положительное число: ";
+cin>>chislo;
+
+  if((chislo %2==0) && (chislo>9) && (chislo < 100)){
+  cout<<"       Истина"<<endl;
+}
+ else {
+ cout<<"      Ложь"<<endl;
+}
+
+cout<<"\nЗадача №4"<<endl;
+int n;
+cout<<"Цифры введенного числа образуют возрастающую или убывающую последовательность?"<<endl;
+cout<<"Введите любое трехзначное число: ";
+cin>>n;
+if ((n / 100)>(n % 100 / 10) && (n % 100 / 10) > (n % 10) || (n / 100)<(n % 100 / 10) && (n % 100 / 10) < (n % 10)) {
+	cout<<"         Истина"<<endl;
+}
+ else {
+ cout<<"      Ложь"<<endl;
+}
+
+cout<<"\n Задача №5"<<endl;
+int q;
+cout<<"Введенное число читается одинаково слева направо и справа налево"<<endl;
+cout<<"Введите четырехзначное число:";
+cin>>q;
+if ((q/1000) == (q % 10) && (q/100 % 10) == (q % 100 /10)){
+	cout<<"    Истина"<<endl;
+}
+ else {
+ cout<<"     Ложь"<<endl;
+}
+
+cout<<"\n Задача №6"<<endl;
+cout<<"Треугольник со сторонами a,b,c является прямоугольным"<<endl;
+cout<<"a="; cin>>a;
+cout<<"b="; cin>>b;
+cout<<"c="; cin>>c;
+if ((a*a == b*b + c*c) || (b*b == a * a + c * c) || (c*c== a * a + b*b)) {
+	cout<<"     Истина"<<endl;
+}
+else {
+	cout<<"   Ложь"<<endl;
+}
+cout<<"\n Задача №7"<<endl;
+cout<<"Существует треугольник со сторонами a,b,c"<<endl;
+cout<<"a="; cin>>a;
+cout<<"b="; cin>>b;
+cout<<"c="; cin>>c;
+if ((a+b) > c && (a+c)>b && (b+c)>a) {
+	cout<<"    Истина"<<endl;
+}
+else {
+	cout<<"   Ложь"<<endl;
+  }
+  return 0;
+  
+ }
