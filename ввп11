@@ -1,0 +1,134 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    /////////////////
+    cout << "\n Задание 1" << endl;
+    int a, b;
+    cout << "A="; cin >> a;
+    cout << "B=";  cin >> b;
+    if (a != b) {
+        if (a > b) {
+            b = a;
+        }
+        else {
+            a = b;
+        }
+        cout << "A=" << a << " и B=" << b << endl;
+    }
+    else {
+        a = 0; b = 0;
+        cout << "A=" << a << " и B=" << b << endl;
+    }
+    //////////////////////
+    cout << "\n Задание 2 <Нахождение суммы двух наибольших чисел>" << endl;
+    int one, two, three;
+    cout << "1 число:"; cin >> one;
+    cout << "2 число:"; cin >> two;
+    cout << "3 число:"; cin >> three;
+    if (one <= two && one <= three) {
+        cout << "Сумма: " << two + three << endl;
+    }
+    else if (two <= one && two <= three) {
+        cout << "Сумма: " << one + three << endl;
+    }
+    else if (three <= one && three <= two) {
+        cout << "Сумма: " << one + two << endl;
+    }
+
+    ////////////////////////// 
+    cout << "\n Задание 3 <Определить, какая из двух последних точек (B или C) расположена ближе к A>" << endl;
+    int x1, x2, x3, y1, y2, y3;
+    double rezab, rezac;
+
+    cout << "Введите координаты точек A,B,C" << endl;
+    cout << "A_X = "; cin >> x1;
+    cout << "A_Y = "; cin >> y1;
+    cout << "B_X = "; cin >> x2;
+    cout << "B_Y = "; cin >> y2;
+    cout << "C_X = "; cin >> x3;
+    cout << "C_Y = "; cin >> y3;
+
+    rezab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    rezac = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+    if (rezab < rezac) {
+        cout << "Точка: B и расстояние:" << rezab << endl;
+    }
+    else if (rezab > rezac) {
+        cout << "Точка: C и расстояние:" << rezac << endl;
+    }
+    else
+        cout << "Расстояния равны";
+
+    cout << "\n Задание 4 <Определить номер координатной четверти, в которой находится данная точка>" << endl;
+    int x, y;
+    cout << "Координата X="; cin >> x;
+    cout << "Координата Y="; cin >> y;
+    if (x > 0 && y > 0) {
+        cout << "Номер координатной четверти:I" << endl;
+    }
+    else if (x < 0 && y>0) {
+        cout << "Номер координатной четверти:II" << endl;
+    }
+    else if (x < 0 && y < 0) {
+        cout << "Номер координатной четверти:III" << endl;
+    }
+    else if (x > 0 && y < 0) {
+        cout << "Номер координатной четверти:IV" << endl;
+    }
+    else {
+        cout << "Ошибка!Точка лежит на координатных осях OX и OY" << endl;
+    }
+    ////////////////////////////////////// 
+    cout << "\n Задание 5 <Строка-описание>" << endl;
+    int shislo;
+    cout << "Введите целое число: "; cin >> shislo;
+    if (shislo > 0 && shislo % 2 == 0) {
+        cout << "--- положительное четное число" << endl;
+    }
+    else if (shislo < 0 && shislo % 2 == 0) {
+        cout << "--- отрицательное четное число" << endl;
+    }
+    else if (shislo > 0 && shislo % 2 != 0) {
+        cout << "--- положительное нечетное число" << endl;
+    }
+    else if (shislo < 0 && shislo % 2 != 0) {
+        cout << "--- отрицательное нечетное число" << endl;
+    }
+    else if (shislo == 0)
+        cout << "--- нулевое число" << endl;
+
+    ////////////////////////////////////////////
+    int q;
+    cout << "\n Задание 6 <Строка-описание>" << endl;
+    cout << "___Введите целое число в диапазоне 1-999__" << endl;
+    cout << "Число: "; cin >> q;
+    if (q <= 999 && q >= 1) {
+        if (q % 2 == 0 && q > 9 && q < 100) {
+            cout << "--- четное двузначное число" << endl;
+        }
+        else if (q % 2 != 0 && q > 9 && q < 100) {
+            cout << "--- нечетное двузначное число" << endl;
+        }
+        else if (q % 2 != 0 && q <= 9 && q >= 1) {
+            cout << "--- нечетное однозначное число" << endl;
+        }
+        else if (q % 2 == 0 && q <= 9 && q >= 1) {
+            cout << "--- четное однозначное число" << endl;
+        }
+        else if (q % 2 != 0 && q > 99 && q <= 999) {
+            cout << "--- нечетное трехзначное число" << endl;
+        }
+        else if (q % 2 == 0 && q > 99 && q <= 999) {
+            cout << "--- четное трехзначное число" << endl;
+        }
+    }
+    else
+        cout << "Не выполнено условие задания! Вы ввели число больше или меньше!" << endl;
+    return 0;
+}
